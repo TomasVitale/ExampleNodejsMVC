@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "011c36e1-d336-4eb3-9643-cb80dbdacec4",
+		"name": "CRUD Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17783225"
+	},
+	"item": [
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXMGE3N2JxbERYVzhGSlUzUXFtZ28zWUF1alVEYnhZVk5MeGtPbklqY2wwIn0.eyJleHAiOjE2NTY3NzEzMzMsImlhdCI6MTY1Njc3MTAzMywianRpIjoiZmZhMzc4MDEtNzBiZi00MzRiLWE4YmItNGI1YTQ0NTI0YzQyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lbnZpYW1lIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImYxNzQ0NTMyLWMzY2MtNDk5Yy1iMmJlLTZiZjExODgxNjg5NyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVudmlhbWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1lbnZpYW1lIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImVudmlhbWUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZW52aWFtZSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.DQDfyzJlCbeYrmJZ0eHzPiiu3tw_zeO07RlU7XNDMovtX58FDSXGSqLdeyWBKZduuXEZ0c1Dd2C6LLIkyKpDTd607JiUz_S6Tp8nzR40zjH6oggO0uhaTSyysyVdPt8obtyftRSprw1faP5bZ34w7ZVuMa2tE2TCe2ZhbAQKLgVs1QoLHoxfck6_FL6MskYFKJ0ngGDKFqeJxR7pwdiXutFIeU9rhFdk2x0YMVNsg3DBko4ZZRUQCCgiozu_IogKce8vfFQsByhPaC0vyR4X2tNBtl4KU3CdcGOW1d4rIYHhz_-rmudbGwXJQSRa-yVdeXzDgcfG8QYnWWAApBXjkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/listUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"listUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOneUser/\":id\"",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXMGE3N2JxbERYVzhGSlUzUXFtZ28zWUF1alVEYnhZVk5MeGtPbklqY2wwIn0.eyJleHAiOjE2NTY3NzEzMzMsImlhdCI6MTY1Njc3MTAzMywianRpIjoiZmZhMzc4MDEtNzBiZi00MzRiLWE4YmItNGI1YTQ0NTI0YzQyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lbnZpYW1lIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImYxNzQ0NTMyLWMzY2MtNDk5Yy1iMmJlLTZiZjExODgxNjg5NyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVudmlhbWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1lbnZpYW1lIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImVudmlhbWUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZW52aWFtZSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.DQDfyzJlCbeYrmJZ0eHzPiiu3tw_zeO07RlU7XNDMovtX58FDSXGSqLdeyWBKZduuXEZ0c1Dd2C6LLIkyKpDTd607JiUz_S6Tp8nzR40zjH6oggO0uhaTSyysyVdPt8obtyftRSprw1faP5bZ34w7ZVuMa2tE2TCe2ZhbAQKLgVs1QoLHoxfck6_FL6MskYFKJ0ngGDKFqeJxR7pwdiXutFIeU9rhFdk2x0YMVNsg3DBko4ZZRUQCCgiozu_IogKce8vfFQsByhPaC0vyR4X2tNBtl4KU3CdcGOW1d4rIYHhz_-rmudbGwXJQSRa-yVdeXzDgcfG8QYnWWAApBXjkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/getOneUser/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"getOneUser",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXMGE3N2JxbERYVzhGSlUzUXFtZ28zWUF1alVEYnhZVk5MeGtPbklqY2wwIn0.eyJleHAiOjE2NTY3NzEzMzMsImlhdCI6MTY1Njc3MTAzMywianRpIjoiZmZhMzc4MDEtNzBiZi00MzRiLWE4YmItNGI1YTQ0NTI0YzQyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lbnZpYW1lIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImYxNzQ0NTMyLWMzY2MtNDk5Yy1iMmJlLTZiZjExODgxNjg5NyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVudmlhbWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1lbnZpYW1lIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImVudmlhbWUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZW52aWFtZSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.DQDfyzJlCbeYrmJZ0eHzPiiu3tw_zeO07RlU7XNDMovtX58FDSXGSqLdeyWBKZduuXEZ0c1Dd2C6LLIkyKpDTd607JiUz_S6Tp8nzR40zjH6oggO0uhaTSyysyVdPt8obtyftRSprw1faP5bZ34w7ZVuMa2tE2TCe2ZhbAQKLgVs1QoLHoxfck6_FL6MskYFKJ0ngGDKFqeJxR7pwdiXutFIeU9rhFdk2x0YMVNsg3DBko4ZZRUQCCgiozu_IogKce8vfFQsByhPaC0vyR4X2tNBtl4KU3CdcGOW1d4rIYHhz_-rmudbGwXJQSRa-yVdeXzDgcfG8QYnWWAApBXjkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "loro",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "perrito",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dasdasd1234",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/createUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editUser/\":id\"",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXMGE3N2JxbERYVzhGSlUzUXFtZ28zWUF1alVEYnhZVk5MeGtPbklqY2wwIn0.eyJleHAiOjE2NTY3NzEzMzMsImlhdCI6MTY1Njc3MTAzMywianRpIjoiZmZhMzc4MDEtNzBiZi00MzRiLWE4YmItNGI1YTQ0NTI0YzQyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lbnZpYW1lIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImYxNzQ0NTMyLWMzY2MtNDk5Yy1iMmJlLTZiZjExODgxNjg5NyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVudmlhbWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1lbnZpYW1lIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImVudmlhbWUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZW52aWFtZSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.DQDfyzJlCbeYrmJZ0eHzPiiu3tw_zeO07RlU7XNDMovtX58FDSXGSqLdeyWBKZduuXEZ0c1Dd2C6LLIkyKpDTd607JiUz_S6Tp8nzR40zjH6oggO0uhaTSyysyVdPt8obtyftRSprw1faP5bZ34w7ZVuMa2tE2TCe2ZhbAQKLgVs1QoLHoxfck6_FL6MskYFKJ0ngGDKFqeJxR7pwdiXutFIeU9rhFdk2x0YMVNsg3DBko4ZZRUQCCgiozu_IogKce8vfFQsByhPaC0vyR4X2tNBtl4KU3CdcGOW1d4rIYHhz_-rmudbGwXJQSRa-yVdeXzDgcfG8QYnWWAApBXjkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "aaaaaaaaaaa",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aaaaaaaa",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aaaaaaa",
+							"type": "text"
+						},
+						{
+							"key": "is_admin",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/editUser/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"editUser",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser/\":id\"",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXMGE3N2JxbERYVzhGSlUzUXFtZ28zWUF1alVEYnhZVk5MeGtPbklqY2wwIn0.eyJleHAiOjE2NTY3NzEzMzMsImlhdCI6MTY1Njc3MTAzMywianRpIjoiZmZhMzc4MDEtNzBiZi00MzRiLWE4YmItNGI1YTQ0NTI0YzQyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lbnZpYW1lIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImYxNzQ0NTMyLWMzY2MtNDk5Yy1iMmJlLTZiZjExODgxNjg5NyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVudmlhbWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1lbnZpYW1lIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImVudmlhbWUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZW52aWFtZSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.DQDfyzJlCbeYrmJZ0eHzPiiu3tw_zeO07RlU7XNDMovtX58FDSXGSqLdeyWBKZduuXEZ0c1Dd2C6LLIkyKpDTd607JiUz_S6Tp8nzR40zjH6oggO0uhaTSyysyVdPt8obtyftRSprw1faP5bZ34w7ZVuMa2tE2TCe2ZhbAQKLgVs1QoLHoxfck6_FL6MskYFKJ0ngGDKFqeJxR7pwdiXutFIeU9rhFdk2x0YMVNsg3DBko4ZZRUQCCgiozu_IogKce8vfFQsByhPaC0vyR4X2tNBtl4KU3CdcGOW1d4rIYHhz_-rmudbGwXJQSRa-yVdeXzDgcfG8QYnWWAApBXjkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/deleteUser/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"deleteUser",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSellerUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXMGE3N2JxbERYVzhGSlUzUXFtZ28zWUF1alVEYnhZVk5MeGtPbklqY2wwIn0.eyJleHAiOjE2NTY3NzEzMzMsImlhdCI6MTY1Njc3MTAzMywianRpIjoiZmZhMzc4MDEtNzBiZi00MzRiLWE4YmItNGI1YTQ0NTI0YzQyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lbnZpYW1lIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImYxNzQ0NTMyLWMzY2MtNDk5Yy1iMmJlLTZiZjExODgxNjg5NyIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVudmlhbWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1lbnZpYW1lIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6ImVudmlhbWUiLCJjbGllbnRIb3N0IjoiMTI3LjAuMC4xIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtZW52aWFtZSIsImNsaWVudEFkZHJlc3MiOiIxMjcuMC4wLjEifQ.DQDfyzJlCbeYrmJZ0eHzPiiu3tw_zeO07RlU7XNDMovtX58FDSXGSqLdeyWBKZduuXEZ0c1Dd2C6LLIkyKpDTd607JiUz_S6Tp8nzR40zjH6oggO0uhaTSyysyVdPt8obtyftRSprw1faP5bZ34w7ZVuMa2tE2TCe2ZhbAQKLgVs1QoLHoxfck6_FL6MskYFKJ0ngGDKFqeJxR7pwdiXutFIeU9rhFdk2x0YMVNsg3DBko4ZZRUQCCgiozu_IogKce8vfFQsByhPaC0vyR4X2tNBtl4KU3CdcGOW1d4rIYHhz_-rmudbGwXJQSRa-yVdeXzDgcfG8QYnWWAApBXjkA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/getSellerUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"getSellerUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBuyerUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/getBuyerUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"getBuyerUsers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

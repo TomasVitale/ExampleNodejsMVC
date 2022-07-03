@@ -1,0 +1,34 @@
+version: "3.9"
+networks:
+ default:
+  external: true
+  name: enviame-net
+services:
+ postgres:
+  container_name: postgres
+  image: postgres:latest
+  networks:
+   default:
+    ipv4_address: 172.28.5.1    
+  restart: always
+  ports:
+   - "25432:5432"
+  environment:
+    DATABASE_HOST: 172.28.5.1
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: Saraza01!
+    POSTGRES_DB: Enviame
+ pgadmin:
+  container_name: pgadmin4
+  image: dpage/pgadmin4
+  networks:
+   default:
+    ipv4_address: 172.28.5.2    
+  environment:
+   PGADMIN_DEFAULT_EMAIL: "tomasvitale@enviame.com"
+   PGADMIN_DEFAULT_PASSWORD: "enviame"
+  ports:
+   - "80:80"
+  depends_on:
+   - postgres
+

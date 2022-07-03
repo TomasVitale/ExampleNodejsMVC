@@ -1,0 +1,21 @@
+{
+  "name": "proyectoenviame",
+  "version": "1.0.0",
+  "description": "Entorno Local :",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "keycloak-connect": "^18.0.2",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.2"
+  }
+}
