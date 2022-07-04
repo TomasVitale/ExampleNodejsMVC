@@ -55,7 +55,7 @@ Requerimientos:
 
 Abrir la terminal
 
-1 - Para ejecutar el postgres en docker. Dirigirse a la carpeta raiz (proyectoEnviame) desde la terminal y ejecutar el comando docker-compose up.
+1 - Para ejecutar el postgres en docker. Dirigirse a la carpeta raiz (proyectoEnviame) desde la terminal y ejecutar el comando docker-compose up. ( antes de levantar el proyecto en docker, dirigirse a la carpeta database en la raiz del proyecto, abrir el archivo db.js y en host colocar la ip que corre el postgres 172.28.5.1 )
     
     - Conectarse al pgadmin en el navegador <http://localhost:80> y crear servidor y base de datos llamada Enviame.
                   Host: 172.28.5.1
@@ -63,7 +63,7 @@ Abrir la terminal
  Usuario mantenimiento: postgres
                Usuario: postgres
               Password: Saraza01! 
-  -- El pgAdmin va a estar corriendo en el puerto 80 ( localhost:80). Ingresar con el usuario ( tomasvitale@enviame.com), contraseña ( enviame ). Crear la base de datos (Enviame), las tablas se crean en el Schema public al ejecutar la app. 
+  -- El pgAdmin va a estar corriendo en el puerto 80 ( localhost:80). Ingresar con el usuario ( tomasvitale@enviame.com), contraseña ( enviame ). Crear la base de datos (Enviame), las tablas se crean en el Schema public al ejecutar la app.  
 
 2 - Crear el contenedor de Keycloak con la imagen oficial. A diferencia del entorno local, aqui se esta definiendo un usuario ( admin) y una contrasena(enviame) por comando. Ingresar con esos datos al Realm
   
