@@ -85,20 +85,3 @@ Abrir la terminal
 
 
 ******************************************                                           ********************************
-
-  Nota personal :
-
-  Falle con un par de puntos en funcionalidad, tengo entendido que para poder realizar la tarea: 
-
-  Un producto tiene una cantidad de unidades, las que se van descontando en la medida en que las unidades son compradas. Una vez que su cantidad llega a cero el producto cambia su status a inactivo.
-   Solo se pueden comprar productos activos, y un producto estará activo si existen unidades disponibles de el.
-
-   es posible mediante hooks pero no tengo experiencia trabajando con los mismos, podrian en todo caso decirme si es correcto algo similar ?
-
-   Transactions.beforeCreate( transactions => {
-  if (Sequelize.Products.quantity == 0) {
-    throw new Error(“No stock disponible”);
-  }
-});
-
- Muchisimas Gracias por la oportunidad. Saludos!!
